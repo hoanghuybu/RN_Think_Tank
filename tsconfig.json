@@ -1,6 +1,44 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "module": "esnext",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "strictNullChecks": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "jsx": "react-native",
+    "lib": ["ES2021.String", "ES2018", "dom"],
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "noEmit": false,
+    "strict": true,
+    "target": "esnext",
+    "baseUrl": "./src",
+    "paths": {
+      "@assets": ["assets"],
+      "@components": ["components"],
+      "@hooks": ["hooks"],
+      "@navigation": ["navigation"],
+      "@screens": ["screens"],
+      "@theme": ["theme"],
+      "@utils": ["utils"],
+      "@store": ["store"],
+      "@function": ["functions"],
+      "@helpers/*": ["helpers/*"],
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@navigation/*": ["navigation/*"],
+      "@screens/*": ["screens/*"],
+      "@theme/*": ["theme/*"],
+      "@utils/*": ["utils/*"],
+      "@store/*": ["store/*"],
+      "@function/*": ["functions/*"]
+    }
   }
 }
