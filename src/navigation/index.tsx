@@ -32,7 +32,7 @@ function MainNavigation() {
       theme={MyTheme}
       ref={navigationRef}
       onStateChange={ScreenTracking}>
-      <StatusBar barStyle='light-content' />
+      <StatusBar barStyle='dark-content' />
       <MainNavigator />
     </NavigationContainer>
   );
