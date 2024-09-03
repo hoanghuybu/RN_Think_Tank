@@ -1,4 +1,4 @@
-import { Text, TextStyle, ViewStyle } from "react-native";
+import { StyleSheet, Text, TextStyle, ViewStyle } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 type Props = {
@@ -10,10 +10,24 @@ type Props = {
 
 function ButtonComponents(props: Props) {
   return (
-    <TouchableOpacity style={props.styleContainer} onPress={props.onPress}>
-      <Text style={props.styleTxt}>{props.title}</Text>
+    <TouchableOpacity
+      style={[styles.buttonContainer, props.styleContainer]}
+      onPress={props.onPress}>
+      <Text style={[styles.txtTitle, props.styleTxt]}>{props.title}</Text>
     </TouchableOpacity>
   );
 }
+
+const styles = StyleSheet.create({
+  buttonContainer: {
+    width: 100,
+    height: 100,
+    margin: 10,
+    padding: 10
+  },
+  txtTitle: {
+    fontSize: 14
+  }
+});
 
 export default ButtonComponents;

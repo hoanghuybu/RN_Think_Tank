@@ -2,10 +2,8 @@ import {
   CardStyleInterpolators,
   createStackNavigator
 } from "@react-navigation/stack";
-import Login from "@screens/Auth/Login";
-import HomeScreen from "@screens/home";
 import { blackColor } from "constanst/Colors";
-import { ROUTE_KEY } from "./routes";
+import AuthNavigator from "./AuthNavigation";
 
 const { Navigator, Screen } = createStackNavigator<any>();
 
@@ -25,14 +23,11 @@ function MainNavigator() {
   return (
     <Navigator screenOptions={defaultOption}>
       <Screen
-        name={ROUTE_KEY.login}
-        component={Login}
-        options={{ gestureEnabled: false }}
-      />
-      <Screen
-        name={ROUTE_KEY.home}
-        component={HomeScreen}
-        options={{ gestureEnabled: false }}
+        name='AuthNavigator'
+        options={{
+          headerShown: false
+        }}
+        component={AuthNavigator}
       />
     </Navigator>
   );
