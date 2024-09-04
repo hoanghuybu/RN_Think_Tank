@@ -1,8 +1,6 @@
-import { navigate } from "@navigation/NavigationServices";
-import { ROUTE_KEY } from "@navigation/routes";
-import { pixelSizeHorizontal } from "@utils";
+import { pixelSizeVertical } from "@utils";
 import { OnboardingData } from "constanst/Data";
-import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { StyleSheet } from "react-native";
 import Animated, {
   useAnimatedScrollHandler,
   useSharedValue
@@ -20,11 +18,6 @@ function OnboardingScreen() {
   });
   return (
     <SafeAreaView style={styles.wrapper}>
-      <TouchableOpacity
-        onPress={() => navigate(ROUTE_KEY.register)}
-        style={styles.btnSkip}>
-        <Text style={{ textAlign: "right" }}>Skip</Text>
-      </TouchableOpacity>
       <Animated.FlatList
         onScroll={onScroll}
         keyExtractor={(item) => item.id}
@@ -48,9 +41,8 @@ const styles = StyleSheet.create({
   wrapper: {
     flex: 1
   },
-  btnSkip: {
-    paddingHorizontal: pixelSizeHorizontal(10)
-  }
+
+  txtSkip: { fontSize: pixelSizeVertical(16), textAlign: "right" }
 });
 
 export default OnboardingScreen;

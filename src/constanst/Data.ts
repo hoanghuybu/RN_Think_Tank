@@ -22,6 +22,11 @@ export const OnboardingData: OnboardingDataDTO[] = [
     title: "The result of effort",
     content:
       "We help you achieve goals and reward you with interesting badges as a part of the accomplishment. You can share your achievements and progress through social media, showcasing to friends and the community your progress in enhancing your memory."
+  },
+  {
+    id: "4",
+    image: localImages().logo_text,
+    title: `Are you ready for your own \n memory journey?`
   }
 ];
 

@@ -11,7 +11,7 @@ export type OnboardingDataDTO = {
   id: string;
   image: any;
   title: string;
-  content: string;
+  content?: string;
 };
 
 export type DevicesDTO = {
