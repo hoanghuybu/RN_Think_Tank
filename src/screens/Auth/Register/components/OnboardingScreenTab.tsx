@@ -8,7 +8,7 @@ import {
   pixelSizeHorizontal,
   pixelSizeVertical
 } from "@utils";
-import { darkBule2D4059, redEA5455, whiteColor } from "constanst/Colors";
+import { darkBule2D4059, whiteColor } from "constanst/Colors";
 import { OnboardingDataDTO } from "constanst/DTOs";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Animated, {
@@ -16,6 +16,7 @@ import Animated, {
   interpolate,
   useAnimatedStyle
 } from "react-native-reanimated";
+import { stylesGlobal } from "../../../../../stylesGlobal";
 
 type Props = {
   item: OnboardingDataDTO;
@@ -84,7 +85,7 @@ function OnboardingScreenTab(props: Props) {
           }}
           title='Continue'
           onPress={() => navigate(ROUTE_KEY.register)}
-          styleContainer={styles.secondaryColor}
+          styleContainer={stylesGlobal.secondaryColor}
         />
       )}
     </View>
@@ -117,15 +118,6 @@ const styles = StyleSheet.create({
     fontSize: fontPixel(14),
     opacity: 0.6,
     marginHorizontal: pixelSizeHorizontal(10)
-  },
-  secondaryColor: {
-    width: pixelSizeHorizontal(350),
-    height: pixelSizeVertical(70),
-    backgroundColor: redEA5455,
-    alignItems: "center",
-    justifyContent: "center",
-    marginVertical: 10,
-    borderRadius: 6
   },
   btnSkip: {
     width: deviceWidth,

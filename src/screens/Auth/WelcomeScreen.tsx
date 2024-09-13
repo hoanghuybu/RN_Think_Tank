@@ -5,6 +5,7 @@ import { ROUTE_KEY } from "@navigation/routes";
 import { pixelSizeHorizontal, pixelSizeVertical } from "@utils";
 import { blackColor, primaryColor, whiteColor } from "constanst/Colors";
 import { Image, SafeAreaView, StyleSheet, View } from "react-native";
+import { stylesGlobal } from "../../../stylesGlobal";
 
 function WelcomeScreen() {
   return (
@@ -31,7 +32,7 @@ function WelcomeScreen() {
             }}
             title='Get started'
             onPress={() => navigate(ROUTE_KEY.onboarding)}
-            styleContainer={styles.primaryColor}
+            styleContainer={stylesGlobal.primaryColor}
           />
           <ButtonComponents
             styleTxt={{
@@ -41,7 +42,7 @@ function WelcomeScreen() {
             }}
             title='Already a member? Sign in'
             onPress={() => navigate(ROUTE_KEY.login)}
-            styleContainer={styles.outlinePrimaryColor}
+            styleContainer={stylesGlobal.outlinePrimaryColor}
           />
         </View>
       </View>
@@ -56,8 +57,8 @@ const styles = StyleSheet.create({
     height: pixelSizeVertical(150)
   },
   logoText: {
-    width: 300,
-    height: 175
+    width: pixelSizeHorizontal(300),
+    height: pixelSizeVertical(175)
   },
   primaryColor: {
     width: pixelSizeHorizontal(350),

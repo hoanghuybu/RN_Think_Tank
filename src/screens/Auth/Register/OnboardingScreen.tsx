@@ -1,4 +1,3 @@
-import { pixelSizeVertical } from "@utils";
 import { OnboardingData } from "constanst/Data";
 import { StyleSheet } from "react-native";
 import Animated, {
@@ -31,7 +30,6 @@ function OnboardingScreen() {
         pagingEnabled={true}
         showsHorizontalScrollIndicator={false}
       />
-
       <PaginationIndicator data={OnboardingData} x={x} />
     </SafeAreaView>
   );
@@ -40,9 +38,7 @@ function OnboardingScreen() {
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1
-  },
-
-  txtSkip: { fontSize: pixelSizeVertical(16), textAlign: "right" }
+  }
 });
 
 export default OnboardingScreen;

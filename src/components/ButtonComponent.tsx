@@ -1,3 +1,4 @@
+import React from "react";
 import { StyleSheet, Text, TextStyle, ViewStyle } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
@@ -6,6 +7,7 @@ type Props = {
   onPress: () => void;
   styleContainer?: ViewStyle;
   styleTxt?: TextStyle;
+  item?: React.ReactNode;
 };
 
 function ButtonComponents(props: Props) {
@@ -13,6 +15,7 @@ function ButtonComponents(props: Props) {
     <TouchableOpacity
       style={[styles.buttonContainer, props.styleContainer]}
       onPress={props.onPress}>
+      {props.item}
       <Text style={[styles.txtTitle, props.styleTxt]}>{props.title}</Text>
     </TouchableOpacity>
   );
