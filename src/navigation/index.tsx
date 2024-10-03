@@ -1,3 +1,4 @@
+import useGetFcmToken from "@hooks/useGetFcmToken";
 import {
   DefaultTheme,
   NavigationContainer,
@@ -27,6 +28,7 @@ const MyTheme = {
 };
 
 function MainNavigation() {
+  useGetFcmToken();
   return (
     <NavigationContainer
       theme={MyTheme}

@@ -1,4 +1,4 @@
-package com.hoanghuy826295.Think_Tank
+package com.hoanghuybu.thinktank.dev
 
 import android.app.Application
 import android.content.res.Configuration

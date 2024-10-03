@@ -44,7 +44,7 @@ if (getRNMinorVersion() >= 75) {
   }
 }
 
-rootProject.name = 'Think_Tank'
+rootProject.name = 'THINK TANK'
 
 dependencyResolutionManagement {
   versionCatalogs {

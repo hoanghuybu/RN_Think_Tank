@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDgryhh4j9u1flU1dtIYaydX1R9Qw8yxZg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>872036793838</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hoanghuybu.thinktank.dev</string>
+	<key>PROJECT_ID</key>
+	<string>think-tank-70f00</string>
+	<key>STORAGE_BUCKET</key>
+	<string>think-tank-70f00.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:872036793838:ios:532e44177fed468849e2ff</string>
+</dict>
+</plist>

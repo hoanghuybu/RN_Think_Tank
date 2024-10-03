@@ -109,9 +109,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.hoanghuy826295.Think_Tank'
+    namespace 'com.hoanghuybu.thinktank.dev'
     defaultConfig {
-        applicationId 'com.hoanghuy826295.Think_Tank'
+        applicationId 'com.hoanghuybu.thinktank.dev'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -4,13 +4,30 @@ import InputComponent from "@components/InputComponent";
 import NavigationHeader from "@components/NavigationHeader";
 import Row from "@components/RowComponent";
 import Separator from "@components/Separator";
+import { navigate } from "@navigation/NavigationServices";
+import { ROUTE_KEY } from "@navigation/routes";
 import { fontPixel, pixelSizeHorizontal, pixelSizeVertical } from "@utils";
 import { gray818C9B, grayD9D9D9, whiteColor } from "constanst/Colors";
+import { useState } from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { stylesGlobal } from "../../../../stylesGlobal";
 
 function Register() {
+  const [input, setInput] = useState(null);
+
+  // function
+  const handleChangeInput = (
+    keyInput: string,
+    value: string | number | Date | any
+  ) => {
+    setInput((pre: any) => ({
+      ...pre,
+      [keyInput]: value
+    }));
+  };
+
+  console.log(input);
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <NavigationHeader theme='dark' />
@@ -25,13 +42,44 @@ function Register() {
             }>{`Please enter your full name, username, email \n address and password`}</Text>
         </View>
         <Separator height={30} />
-        <InputComponent title='Full Name' isRequired />
-        <Separator height={20} />
-        <InputComponent title='User Name' isRequired />
-        <Separator height={20} />
-        <InputComponent title='Email' isRequired />
-        <Separator height={20} />
-        <InputComponent title='Password' isRequired />
+        <Row direction='column' rowGap={pixelSizeVertical(20)}>
+          <InputComponent
+            multiline
+            text={input?.fullName}
+            keyInput='fullName'
+            handleChangeInput={handleChangeInput}
+            title='Full Name'
+            isRequired
+          />
+
+          <InputComponent
+            multiline
+            text={input?.userName}
+            keyInput='userName'
+            handleChangeInput={handleChangeInput}
+            title='User Name'
+            isRequired
+          />
+
+          <InputComponent
+            multiline
+            text={input?.email}
+            keyInput='email'
+            handleChangeInput={handleChangeInput}
+            title='Email'
+            isRequired
+          />
+
+          <InputComponent
+            text={input?.password}
+            keyInput='password'
+            handleChangeInput={handleChangeInput}
+            title='Password'
+            isRequired
+            secureTextEntry
+          />
+        </Row>
+
         <Separator height={60} />
         <Row colGap={15} full center>
           <View style={styles.line} />
@@ -61,7 +109,7 @@ function Register() {
             fontWeight: "700"
           }}
           title='Sign up'
-          onPress={() => {}}
+          onPress={() => navigate(ROUTE_KEY.login)}
           styleContainer={stylesGlobal.secondaryColor}
         />
       </Row>

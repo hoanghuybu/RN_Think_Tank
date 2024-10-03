@@ -56,4 +56,34 @@ export type LoginResponseParam = {
   version: string;
   versionToken: number;
 };
+
+export type RegisterRequestParam = {
+  fullName: string;
+  userName: string;
+  email: string;
+  password: string;
+  fcm: string;
+};
+
+export type RegisterResponseParam = {
+  id: number;
+  code: string;
+  fullName: string;
+  userName: string;
+  email: string;
+  gender: string;
+  dateOfBirth: string;
+  avatar: string;
+  coin: number;
+  isOnline: true;
+  refreshToken: string;
+  fcm: string;
+  status: true;
+  googleId: string;
+  registrationDate: string;
+  accessToken: string;
+  amountReport: number;
+  version: string;
+  versionToken: number;
+};
 //#endregion

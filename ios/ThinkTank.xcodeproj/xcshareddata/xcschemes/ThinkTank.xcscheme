@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "ThinkTank.app"
-               BlueprintName = "ThinkTank"
-               ReferencedContainer = "container:ThinkTank.xcodeproj">
+               BuildableName = "THINKTANK.app"
+               BlueprintName = "THINKTANK"
+               ReferencedContainer = "container:THINKTANK.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ThinkTankTests.xctest"
-               BlueprintName = "ThinkTankTests"
-               ReferencedContainer = "container:ThinkTank.xcodeproj">
+               BuildableName = "THINKTANKTests.xctest"
+               BlueprintName = "THINKTANKTests"
+               ReferencedContainer = "container:THINKTANK.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ThinkTank.app"
-            BlueprintName = "ThinkTank"
-            ReferencedContainer = "container:ThinkTank.xcodeproj">
+            BuildableName = "THINKTANK.app"
+            BlueprintName = "THINKTANK"
+            ReferencedContainer = "container:THINKTANK.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ThinkTank.app"
-            BlueprintName = "ThinkTank"
-            ReferencedContainer = "container:ThinkTank.xcodeproj">
+            BuildableName = "THINKTANK.app"
+            BlueprintName = "THINKTANK"
+            ReferencedContainer = "container:THINKTANK.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
