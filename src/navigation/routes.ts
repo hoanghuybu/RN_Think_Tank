@@ -7,7 +7,11 @@ export const ROUTE_KEY = createEnum({
   //#endregion
 
   //#region home route
-  home: "home"
+  home: "home",
+  memory: "memory",
+  account: "account",
+  achieve: "achieve",
+  friends: "friends"
   //#endregion
 });
 

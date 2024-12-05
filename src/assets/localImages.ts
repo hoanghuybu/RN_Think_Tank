@@ -6,6 +6,9 @@ export function localImages() {
     onboarding_image_2: require("./images/onboarding_image_2.png"),
     onboarding_image_3: require("./images/onboarding_image_3.png"),
     google_icon: require("./images/google_icon.png"),
-    hello_1: require("./images/hello_1.png")
+    hello_1: require("./images/hello_1.png"),
+    main_bg: require("./images/main_bg.png"),
+    home_banner_decor: require("./images/home_banner_decor.png"),
+    avatar_person: require("./images/avatar_person.jpg")
   };
 }

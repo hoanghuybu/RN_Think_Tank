@@ -4,7 +4,6 @@ import {
   NavigationContainer,
   NavigationState
 } from "@react-navigation/native";
-import { whiteColor } from "constanst/Colors";
 import { StatusBar } from "react-native";
 import { navigationRef } from "./NavigationServices";
 import MainNavigator from "./RootStackNavigator";
@@ -23,7 +22,7 @@ const MyTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    background: whiteColor
+    background: "transparent"
   }
 };
 

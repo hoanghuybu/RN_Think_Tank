@@ -8,7 +8,7 @@ import {
   pixelSizeHorizontal,
   pixelSizeVertical
 } from "@utils";
-import { darkBule2D4059, whiteColor } from "constanst/Colors";
+import { darkBlue2D4059, whiteColor } from "constanst/Colors";
 import { OnboardingDataDTO } from "constanst/DTOs";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Animated, {
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     height: deviceWidth * 0.7
   },
   onboardingText: {
-    color: darkBule2D4059,
+    color: darkBlue2D4059,
     textAlign: "center"
   },
   onboardingTitle: {

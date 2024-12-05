@@ -1,5 +1,5 @@
 import { deviceWidth, pixelSizeHorizontal, pixelSizeVertical } from "@utils";
-import { darkBule2D4059 } from "constanst/Colors";
+import { darkBlue2D4059 } from "constanst/Colors";
 import { OnboardingDataDTO } from "constanst/DTOs";
 import { StyleSheet, View } from "react-native";
 import Animated, {
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     width: pixelSizeHorizontal(12),
     height: pixelSizeVertical(12),
     borderRadius: pixelSizeHorizontal(35),
-    backgroundColor: darkBule2D4059
+    backgroundColor: darkBlue2D4059
   },
   paginationWrapper: {
     flexDirection: "row",

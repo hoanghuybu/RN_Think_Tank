@@ -31,5 +31,8 @@ export const stylesGlobal = StyleSheet.create({
     justifyContent: "center",
     marginVertical: 10,
     borderRadius: 6
+  },
+  flex1: {
+    flex: 1
   }
 });

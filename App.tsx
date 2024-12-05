@@ -3,9 +3,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Suspense } from "react";
 import {
   initialWindowMetrics,
-  SafeAreaProvider
+  SafeAreaProvider,
+  SafeAreaView
 } from "react-native-safe-area-context";
 import Toast from "react-native-toast-message";
+import { stylesGlobal } from "./stylesGlobal";
 
 const queryClient = new QueryClient();
 export default function App() {
@@ -14,7 +16,9 @@ export default function App() {
       <QueryClientProvider client={queryClient}>
         <SafeAreaProvider initialMetrics={initialWindowMetrics}>
           <Suspense fallback={null}>
-            <MainNavigation />
+            <SafeAreaView edges={["top"]} style={stylesGlobal.flex1}>
+              <MainNavigation />
+            </SafeAreaView>
           </Suspense>
         </SafeAreaProvider>
       </QueryClientProvider>

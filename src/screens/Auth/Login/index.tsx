@@ -4,6 +4,8 @@ import InputComponent from "@components/InputComponent";
 import NavigationHeader from "@components/NavigationHeader";
 import Row from "@components/RowComponent";
 import Separator from "@components/Separator";
+import { navigate } from "@navigation/NavigationServices";
+import { ROUTE_KEY } from "@navigation/routes";
 import { deviceWidth, pixelSizeHorizontal, pixelSizeVertical } from "@utils";
 import {
   grayD9D9D9,
@@ -106,7 +108,7 @@ function Login() {
             fontWeight: "700"
           }}
           title='Sign in'
-          onPress={() => {}}
+          onPress={() => navigate(ROUTE_KEY.home)}
           styleContainer={stylesGlobal.secondaryColor}
         />
       </Row>
