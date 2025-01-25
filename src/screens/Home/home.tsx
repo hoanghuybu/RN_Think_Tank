@@ -14,6 +14,7 @@ import {
   secondaryColor,
   whiteColor
 } from "constanst/Colors";
+import { ListItemCardGameData } from "constanst/Data";
 import {
   Image,
   ImageBackground,
@@ -22,7 +23,8 @@ import {
   TouchableOpacity,
   View
 } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import { FlatList, ScrollView } from "react-native-gesture-handler";
+import ItemCardGame from "./components/ItemCardGame";
 
 function HomeScreen() {
   return (
@@ -69,6 +71,16 @@ function HomeScreen() {
               challenging gameplay, push your memory skills to the limit.
             </Text>
           </View>
+          <Separator height={20} />
+          <View style={{ height: 310 }}>
+            <FlatList
+              showsHorizontalScrollIndicator={false}
+              data={ListItemCardGameData}
+              horizontal={true}
+              renderItem={({ item }) => <ItemCardGame item={item} />}
+            />
+          </View>
+
           <Separator height={40} />
           <View style={styles.gameWrapper}>
             <Text style={styles.textTitle}>Memory Contest</Text>

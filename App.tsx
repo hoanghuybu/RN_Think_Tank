@@ -1,6 +1,6 @@
 import MainNavigation from "@navigation";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Suspense } from "react";
+import { Fragment, Suspense } from "react";
 import {
   initialWindowMetrics,
   SafeAreaProvider,
@@ -12,7 +12,7 @@ import { stylesGlobal } from "./stylesGlobal";
 const queryClient = new QueryClient();
 export default function App() {
   return (
-    <>
+    <Fragment>
       <QueryClientProvider client={queryClient}>
         <SafeAreaProvider initialMetrics={initialWindowMetrics}>
           <Suspense fallback={null}>
@@ -23,6 +23,6 @@ export default function App() {
         </SafeAreaProvider>
       </QueryClientProvider>
       <Toast />
-    </>
+    </Fragment>
   );
 }

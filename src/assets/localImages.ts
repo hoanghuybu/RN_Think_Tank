@@ -9,6 +9,11 @@ export function localImages() {
     hello_1: require("./images/hello_1.png"),
     main_bg: require("./images/main_bg.png"),
     home_banner_decor: require("./images/home_banner_decor.png"),
+    img_bg_flipcard: require("./images/img_bg_flipcard.png"),
+    img_bg_music_password: require("./images/img_bg_music_password.png"),
+    img_bg_anonymous: require("./images/img_bg_anonymous.png"),
+    img_bg_walkthrough: require("./images/img_bg_walkthrough.png"),
+    img_bg_room_party: require("./images/img_bg_room_party.png"),
     avatar_person: require("./images/avatar_person.jpg")
   };
 }
