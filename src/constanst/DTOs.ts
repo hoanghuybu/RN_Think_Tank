@@ -14,6 +14,15 @@ export type OnboardingDataDTO = {
   content?: string;
 };
 
+export type ItemCardGameDTO = {
+  id: string;
+  imgBg: any;
+  gameName: string;
+  description?: string;
+  type?: string[];
+  bgColor: string;
+};
+
 export type DevicesDTO = {
   [deviceName: string]: {
     width: number;

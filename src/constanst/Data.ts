@@ -1,5 +1,12 @@
 import { localImages } from "@assets/localImages";
-import { DevicesDTO, OnboardingDataDTO } from "./DTOs";
+import {
+  blue557DB0,
+  blue5595B0,
+  orangeFC902A,
+  redEA5455,
+  yellowF5AB2B
+} from "./Colors";
+import { DevicesDTO, ItemCardGameDTO, OnboardingDataDTO } from "./DTOs";
 
 export const OnboardingData: OnboardingDataDTO[] = [
   {
@@ -27,6 +34,53 @@ export const OnboardingData: OnboardingDataDTO[] = [
     id: "4",
     image: localImages().logo_text,
     title: `Are you ready for your own \n memory journey?`
+  }
+];
+
+export const ListItemCardGameData: ItemCardGameDTO[] = [
+  {
+    id: "1",
+    imgBg: localImages().img_bg_flipcard,
+    gameName: "Flip Card Challenge",
+    description:
+      "Experience the thrill of our Flip Card game! Memorize cards and seek out matching pairs, enhancing both your visual and short-term memory skills.",
+    type: ["Visual memory", "Short-term memory"],
+    bgColor: orangeFC902A
+  },
+  {
+    id: "2",
+    imgBg: localImages().img_bg_music_password,
+    gameName: "Music Password",
+    description:
+      "Players will listen to a piece of music provided by the host to decipher the password for the house, enhancing their auditory memory skills.",
+    type: ["Auditory memory", "Interactive memory", "Sensory memory"],
+    bgColor: yellowF5AB2B
+  },
+  {
+    id: "3",
+    imgBg: localImages().img_bg_anonymous,
+    gameName: "Find The Anonymous",
+    description:
+      "The player's mission is to identify the 'anonymous' within a group of people after being provided with a description of that person.",
+    type: ["Short-term memory", "Associative memory"],
+    bgColor: redEA5455
+  },
+  {
+    id: "4",
+    imgBg: localImages().img_bg_walkthrough,
+    gameName: "Images Walkthrough",
+    description:
+      "Experience the thrill of our Flip Card game! Memorize cards and seek out matching pairs, enhancing both your visual and short-term memory skills.",
+    type: ["Sequential memory", "Short-term memory"],
+    bgColor: blue557DB0
+  },
+  {
+    id: "5",
+    imgBg: localImages().img_bg_room_party,
+    gameName: "Room Party",
+    description:
+      "Create a common playroom for friends to improve memory together.",
+    bgColor: blue5595B0
   }
 ];
 
