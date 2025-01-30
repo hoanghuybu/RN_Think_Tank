@@ -4,7 +4,7 @@
       "ios": {
         "image": "latest",
         "cocoapods": "1.15.2",
-        "scheme": "ThinkTankDEV",
+        "scheme": "THINKTANKDEV",
         "simulator": true
       },
       "android": {
@@ -21,7 +21,7 @@
       "ios": {
         "image": "latest",
         "cocoapods": "1.15.2",
-        "scheme": "ThinkTankDEV"
+        "scheme": "THINKTANKDEV"
       },
       "android": {
         "buildType": "apk",
@@ -39,7 +39,7 @@
       "ios": {
         "image": "latest",
         "cocoapods": "1.15.2",
-        "scheme": "ThinkTankSTA"
+        "scheme": "THINKTANKSTA"
       },
       "android": {
         "gradleCommand": ":app:assembleRelease",
@@ -57,7 +57,7 @@
       "ios": {
         "image": "latest",
         "cocoapods": "1.15.2",
-        "scheme": "ThinkTankPRO"
+        "scheme": "THINKTANKPRO"
       },
       "android": {
         "gradleCommand": ":app:assembleRelease",

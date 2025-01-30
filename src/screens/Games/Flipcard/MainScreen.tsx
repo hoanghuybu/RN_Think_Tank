@@ -1,14 +1,22 @@
 import { localImages } from "@assets/localImages";
 import Row from "@components/RowComponent";
 import { AntDesign } from "@expo/vector-icons";
-import { goBack } from "@navigation/NavigationServices";
+import { goBack, navigate } from "@navigation/NavigationServices";
+import { ROUTE_KEY } from "@navigation/routes";
 import {
   deviceHeight,
   deviceWidth,
   pixelSizeHorizontal,
   pixelSizeVertical
 } from "@utils";
-import { primaryColor, secondaryColor, whiteColor } from "constanst/Colors";
+import {
+  darkBlue2D4059,
+  primaryColor,
+  redEA4335,
+  redEA5455,
+  secondaryColor,
+  whiteColor
+} from "constanst/Colors";
 import { LinearGradient } from "expo-linear-gradient";
 import {
   ImageBackground,
@@ -25,8 +33,8 @@ function MainScreen() {
         style={styles.headerBackground}>
         <LinearGradient
           // Button Linear Gradient
-          colors={["#4c669f", "#3b5998", "#192f6a"]}
-          style={styles.button}>
+          colors={["transparent", "rgba(0, 0, 0, 0.5)"]}
+          style={styles.linearBgWrapper}>
           <Row between>
             <TouchableOpacity onPress={() => goBack()}>
               <AntDesign name='arrowleft' size={32} color={whiteColor} />
@@ -62,16 +70,18 @@ function MainScreen() {
       <ImageBackground
         source={localImages().comic_bg}
         style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.playButton}>
+        <TouchableOpacity
+          onPress={() => navigate(ROUTE_KEY.flipcard)}
+          style={[styles.button, styles.playButton]}>
           <Text style={styles.playButtonText}>PLAY</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={[styles.button, styles.battleButton]}>
           <Text style={styles.buttonText}>1V1 BATTLE</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>LEADERBOARD</Text>
+        <TouchableOpacity style={[styles.button, styles.leaderboardButton]}>
+          <Text style={styles.buttonLeaderboard}>LEADERBOARD</Text>
         </TouchableOpacity>
       </ImageBackground>
     </View>
@@ -85,7 +95,10 @@ const styles = StyleSheet.create({
     position: "absolute"
   },
   headerBackground: {
-    height: pixelSizeVertical(400),
+    height: pixelSizeVertical(400)
+  },
+  linearBgWrapper: {
+    flex: 1,
     padding: 20,
     paddingBottom: 40,
     justifyContent: "space-between"
@@ -102,10 +115,10 @@ const styles = StyleSheet.create({
     gap: 10
   },
   modeButton: {
-    backgroundColor: "rgba(0, 0, 0, 0.2)",
+    backgroundColor: darkBlue2D4059,
     paddingHorizontal: 15,
     paddingVertical: 8,
-    borderRadius: 20
+    borderRadius: 8
   },
   modeText: {
     color: "#FFFFFF",
@@ -115,26 +128,11 @@ const styles = StyleSheet.create({
     height: deviceHeight - pixelSizeVertical(400) + 30,
     bottom: 30,
     padding: 20,
-    justifyContent: "center",
+    paddingTop: pixelSizeVertical(100),
     gap: 15,
-    backgroundColor: "red",
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
     overflow: "hidden"
-  },
-  playButton: {
-    backgroundColor: "#FF3B30",
-    paddingVertical: 15,
-    borderRadius: 25,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5
   },
   playButtonText: {
     color: "#FFFFFF",
@@ -142,9 +140,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   },
   button: {
-    backgroundColor: "#FF8157",
-    paddingVertical: 15,
-    borderRadius: 25,
+    paddingVertical: 20,
+    borderRadius: pixelSizeHorizontal(40),
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
@@ -153,12 +150,30 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-    elevation: 5
+    elevation: 5,
+    borderWidth: 4
+  },
+  playButton: {
+    backgroundColor: redEA4335,
+    borderColor: whiteColor
+  },
+  battleButton: {
+    backgroundColor: primaryColor,
+    borderColor: whiteColor
+  },
+  leaderboardButton: {
+    borderColor: redEA5455,
+    backgroundColor: "transparent"
   },
   buttonText: {
-    color: "#FFFFFF",
+    color: whiteColor,
     fontSize: 20,
-    fontWeight: "bold"
+    fontWeight: "900"
+  },
+  buttonLeaderboard: {
+    color: redEA5455,
+    fontSize: 20,
+    fontWeight: "900"
   }
 });
 
