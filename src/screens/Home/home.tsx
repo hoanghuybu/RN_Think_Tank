@@ -42,8 +42,9 @@ function HomeScreen() {
         </Row>
         <NotifySVG color={secondaryColor} />
       </Row>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={{ height: 160 }} />
+      <ScrollView
+        contentContainerStyle={{ paddingVertical: 160 }}
+        showsVerticalScrollIndicator={false}>
         <View style={styles.contentWrapper}>
           <View style={styles.banner}>
             <Image
@@ -72,16 +73,13 @@ function HomeScreen() {
             </Text>
           </View>
           <Separator height={20} />
-          <View style={{ height: 310 }}>
-            <FlatList
-              showsHorizontalScrollIndicator={false}
-              data={ListItemCardGameData}
-              horizontal={true}
-              renderItem={({ item }) => <ItemCardGame item={item} />}
-            />
-          </View>
-
-          <Separator height={40} />
+          <FlatList
+            showsHorizontalScrollIndicator={false}
+            data={ListItemCardGameData}
+            horizontal={true}
+            renderItem={({ item }) => <ItemCardGame item={item} />}
+          />
+          <Separator height={20} />
           <View style={styles.gameWrapper}>
             <Text style={styles.textTitle}>Memory Contest</Text>
             <Text style={styles.textDescription}>
@@ -90,6 +88,27 @@ function HomeScreen() {
               journey to becoming a “Memory master”.
             </Text>
           </View>
+          <Separator height={20} />
+          <FlatList
+            showsHorizontalScrollIndicator={false}
+            data={[1, 2]}
+            horizontal={true}
+            renderItem={() => (
+              <View
+                style={{
+                  height: 192,
+                  width: deviceWidth - 20,
+                  borderRadius: 20,
+                  overflow: "hidden",
+                  marginRight: 5
+                }}>
+                <Image
+                  style={{ resizeMode: "repeat" }}
+                  source={localImages().img_contest}
+                />
+              </View>
+            )}
+          />
         </View>
       </ScrollView>
     </ImageBackground>
@@ -115,7 +134,7 @@ const styles = StyleSheet.create({
   },
   contentWrapper: {
     width: deviceWidth,
-    height: deviceHeight,
+    height: "auto",
     paddingHorizontal: pixelSizeHorizontal(10)
   },
   banner: {

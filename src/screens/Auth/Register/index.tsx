@@ -27,7 +27,6 @@ function Register() {
     }));
   };
 
-  console.log(input);
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <NavigationHeader theme='dark' />
