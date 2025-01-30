@@ -3,8 +3,10 @@ import {
   createStackNavigator
 } from "@react-navigation/stack";
 import { blackColor } from "constanst/Colors";
+import { Fragment } from "react";
 import AppNavigator from "./AppNavigation";
 import AuthNavigator from "./AuthNavigation";
+import GameNavigator from "./GameNavigation";
 
 const { Navigator, Screen, Group } = createStackNavigator<any>();
 
@@ -28,13 +30,20 @@ function MainNavigator() {
   return (
     <Navigator screenOptions={defaultOption}>
       {auth ? (
-        <Screen
-          name='MainNavigator'
-          options={{
-            headerShown: false
-          }}
-          component={AppNavigator}
-        />
+        <Fragment>
+          <Screen
+            name='MainNavigator'
+            options={{
+              headerShown: false
+            }}
+            component={AppNavigator}
+          />
+          <Screen
+            name={"GameNavigator"}
+            component={GameNavigator}
+            options={{ headerShown: false }}
+          />
+        </Fragment>
       ) : (
         <Screen
           name='AuthNavigator'

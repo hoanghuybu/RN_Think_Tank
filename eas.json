@@ -1,0 +1,76 @@
+{
+  "build": {
+    "simulator": {
+      "ios": {
+        "image": "latest",
+        "cocoapods": "1.15.2",
+        "scheme": "ThinkTankDEV",
+        "simulator": true
+      },
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleDebug"
+      },
+      "env": {
+        "EXPO_PUBLIC_APP_VARIANT": "development"
+      },
+      "channel": "development"
+    },
+    "development": {
+      "developmentClient": false,
+      "ios": {
+        "image": "latest",
+        "cocoapods": "1.15.2",
+        "scheme": "ThinkTankDEV"
+      },
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease"
+      },
+      "env": {
+        "EXPO_PUBLIC_APP_VARIANT": "development"
+      },
+      "autoIncrement": true,
+      "channel": "development"
+    },
+    "test": {
+      "developmentClient": false,
+      "channel": "staging",
+      "ios": {
+        "image": "latest",
+        "cocoapods": "1.15.2",
+        "scheme": "ThinkTankSTA"
+      },
+      "android": {
+        "gradleCommand": ":app:assembleRelease",
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_APP_VARIANT": "staging"
+      },
+      "autoIncrement": true
+    },
+    "production": {
+      "developmentClient": false,
+      "autoIncrement": true,
+      "channel": "production",
+      "ios": {
+        "image": "latest",
+        "cocoapods": "1.15.2",
+        "scheme": "ThinkTankPRO"
+      },
+      "android": {
+        "gradleCommand": ":app:assembleRelease",
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_APP_VARIANT": "production"
+      }
+    }
+  },
+  "cli": {
+    "version": ">= 10.2.1",
+    "promptToConfigurePushNotifications": true,
+    "appVersionSource": "remote"
+  }
+}

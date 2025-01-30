@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "Think_Tank",
-    "slug": "Think_Tank",
+    "slug": "think-tank",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -15,7 +15,7 @@
       "supportsTablet": true,
       "bundleIdentifier": "y",
       "entitlements": {
-        "aps-environment":"production" 
+        "aps-environment": "production"
       }
     },
     "android": {
@@ -23,10 +23,28 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.hoanghuy826295.Think_Tank"
+      "package": "com.hoanghuybu.Think_Tank"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "@react-native-firebase/crashlytics",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "e3eda695-6844-4a7c-bc5b-898783c06e43"
+      }
     }
   }
 }

@@ -1,6 +1,7 @@
 import Row from "@components/RowComponent";
 import Separator from "@components/Separator";
 import { AntDesign } from "@expo/vector-icons";
+import { navigate } from "@navigation/NavigationServices";
 import { whiteColor } from "constanst/Colors";
 import { ItemCardGameDTO } from "constanst/DTOs";
 import React from "react";
@@ -13,7 +14,9 @@ type Props = {
 function ItemCardGame(props: Props) {
   const { imgBg, gameName, description, type, bgColor } = props.item;
   return (
-    <TouchableOpacity style={[styles.container, { backgroundColor: bgColor }]}>
+    <TouchableOpacity
+      onPress={() => navigate("GameNavigator")}
+      style={[styles.container, { backgroundColor: bgColor }]}>
       <Image style={styles.img} source={imgBg} />
       <View style={styles.content}>
         <Text style={styles.txtGameName}>{gameName}</Text>

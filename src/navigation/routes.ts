@@ -11,7 +11,12 @@ export const ROUTE_KEY = createEnum({
   memory: "memory",
   account: "account",
   achieve: "achieve",
-  friends: "friends"
+  friends: "friends",
+  //#endregion
+
+  //#region home route
+  mainScreenFlipcard: "mainScreenFlipcard",
+  flipcard: "flipcard"
   //#endregion
 });
 

@@ -14,6 +14,8 @@ export function localImages() {
     img_bg_anonymous: require("./images/img_bg_anonymous.png"),
     img_bg_walkthrough: require("./images/img_bg_walkthrough.png"),
     img_bg_room_party: require("./images/img_bg_room_party.png"),
+    img_contest: require("./images/img_contest.png"),
+    comic_bg: require("./images/comic_bg.png"),
     avatar_person: require("./images/avatar_person.jpg")
   };
 }
